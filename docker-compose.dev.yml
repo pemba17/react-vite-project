@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  web:
+    build: 
+      context: .
+      target: dev
+    image: react-vite-project:dev
+    container_name: react-vite-project-dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+  
