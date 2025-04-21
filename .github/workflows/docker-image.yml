@@ -23,7 +23,7 @@ jobs:
     
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag react-project-vite:latest
+        docker build . --file Dockerfile --target prod --tag react-project-vite:latest 
         docker tag react-project-vite:latest registry.digitalocean.com/private-docker-images/react-project-vite:latest
 
     - name: Push Docker Image to Digital Ocean Registry
