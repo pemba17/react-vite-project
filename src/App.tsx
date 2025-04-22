@@ -4,7 +4,7 @@ function App() {
       <div className="flex justify-center items-center h-screen">
         <h1 className="text-2xl font-bol">
           <ul>
-              Stack I am Using
+              Technologies Stack
               <li> - React</li>
               <li> - Vite</li>
               <li> - TaiwindCSS</li>
