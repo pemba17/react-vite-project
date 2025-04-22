@@ -28,4 +28,4 @@ jobs:
 
     - name: Push Docker Image to Digital Ocean Registry
       run: |
-        docker push registry.digitalocean.com/private-docker-images/react-project-vite:latest
+        docker push registry.digitalocean.com/private-docker-images/react-vite-project:latest
