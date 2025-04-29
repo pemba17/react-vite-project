@@ -60,10 +60,11 @@ I created a **Dockerfile** using a **multi-stage build** approach. Let me explai
   ### Build Process
   ### Development 
   For the development environment, I created a separate Docker Compose file called docker-compose.dev, which builds and runs the container locally. In my Compose file, you will notice the following configuration:
-  `web:
+  ```web:
   build:
     context: .
-    target: dev`
+    target: dev
+  ```
 
   This configuration specifies the use of the dev build target, indicating that we are building the container starting from the dev stage.
 
