@@ -59,7 +59,7 @@ I created a **Dockerfile** using a **multi-stage build** approach. Let me explai
 
   ### Build Process
   ### Development 
-  For the development environment, I created a separate Docker Compose file called docker-compose.dev, which builds and runs the container locally. In my Compose file, you will notice the following configuration:
+  For the development environment, I created a separate Docker Compose file called `docker-compose.dev`, which builds and runs the container locally. In my Compose file, you will notice the following configuration:
   ```web:
   build:
     context: .
@@ -73,7 +73,7 @@ I created a **Dockerfile** using a **multi-stage build** approach. Let me explai
 
   ![Screenshot](https://raw.githubusercontent.com/pemba17/react-vite-project/refs/heads/main/public/screenshots/app-platform.png)
 
-  However, I have created a separate docker-compose.prod file to facilitate running the application on AWS EC2 or DigitalOcean Droplets. This file allows you to build the Docker image directly from the registry on these platforms.
+  However, I have created a separate `docker-compose.prod` file to facilitate running the application on AWS EC2 or DigitalOcean Droplets. This file allows you to build the Docker image directly from the registry on these platforms.
 
   To view the project, click [here](https://react-vite-project-ayk7j.ondigitalocean.app/)
 
