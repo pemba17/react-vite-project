@@ -1,5 +1,8 @@
+version: '3.8'
 services:
   web:
+    build:
+      context: .
     image: registry.digitalocean.com/private-docker-images/react-vite-project:latest
     container_name: react-vite-project-prod
     ports:
