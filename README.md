@@ -71,6 +71,8 @@ I created a **Dockerfile** using a **multi-stage build** approach. Let me explai
   ### Production
     For the production environment, I created a GitHub Actions workflow that builds the Docker image whenever a pull request is created or when code is pushed to the main branch. It uses the `prod` build target and then pushes the Docker image to the DigitalOcean Container Registry. You can refer to my docker-image.yml file for the configuration. Additionally, I have set up the Digital Ocean App Platform to automatically deploy the application when the image is pushed to the registry.
 
+  ![Screenshot](https://raw.githubusercontent.com/pemba17/react-vite-project/refs/heads/main/public/screenshots/app-platform.png)
+
   However, I have created a separate docker-compose.prod file to facilitate running the application on AWS EC2 or DigitalOcean Droplets. This file allows you to build the Docker image directly from the registry on these platforms.
 
   To view the project, click [here](https://react-vite-project-ayk7j.ondigitalocean.app/)
