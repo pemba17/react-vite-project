@@ -1,4 +1,4 @@
-FROM node:20-alpine as base
+FROM node:22-alpine as base
 WORKDIR /app
 COPY package*.json .
 RUN npm install && npm install tailwindcss @tailwindcss/vite
@@ -11,7 +11,7 @@ CMD ["npm","run","dev"]
 FROM base AS build
 RUN npm run build
 
-FROM nginx:1.25.1-alpine as prod
+FROM nginx:1.28.0-alpine as prod
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx","-g","daemon off;"]
