@@ -21,10 +21,10 @@ I created a **Dockerfile** using a **multi-stage build** approach. Let me explai
  First, I defined a base stage:
 
   ```dockerfile
-  FROM node:20-alpine AS base
+  FROM node:22-alpine3.21 as base
   WORKDIR /app
   COPY package*.json .
-  RUN npm install && npm install tailwindcss @tailwindcss/vite
+  RUN npm ci 
   COPY . .
   ```
 
