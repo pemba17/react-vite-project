@@ -1,7 +1,7 @@
-FROM node:22-alpine as base
+FROM node:22-alpine3.21 as base
 WORKDIR /app
 COPY package*.json .
-RUN npm install && npm install tailwindcss @tailwindcss/vite
+RUN npm ci 
 COPY . .
 
 FROM base AS dev
