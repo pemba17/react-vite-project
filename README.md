@@ -1,9 +1,11 @@
-# Simple React Project with Vite, Tailwind CSS, and Docker
+# Building React Project with Vite, TailwindCSS, Docker, and Deploying To DigitalOcean
 
 This is a simple React project that uses Vite for bundling and Tailwind CSS for styling, all set up within a Dockerized environment. The purpose of this project is to learn how Docker can be used for both local development and production environments.
 
+I've also written a blog post about it - [click here to read it] (https://dev.to/pembans/building-react-project-with-vite-tailwindcss-docker-and-deploying-to-digitalocean-3glp)
+
 ### Key Features:
-- **Dockerized Setup**: The project includes two separate `docker-compose` files for local development and production environments.
+- **Dockerized Setup**: The project includes a Dockerfile that supports both the development and production environments using multi-stage build.
 - **CI/CD Pipeline**: In the production environment, the project uses GitHub Actions to build a Docker image, which is then pushed to the DigitalOcean Container Registry. Once the image is successfully pushed, the DigitalOcean App Platform automatically pulls the latest image and deploys the updated application.
 
 ### What I Did
@@ -74,6 +76,4 @@ I created a **Dockerfile** using a **multi-stage build** approach. Let me explai
   ![Screenshot](https://raw.githubusercontent.com/pemba17/react-vite-project/refs/heads/main/public/screenshots/app-platform.png)
 
   However, I have created a separate `docker-compose.prod` file to facilitate running the application on AWS EC2 or DigitalOcean Droplets. This file allows you to build the Docker image directly from the registry on these platforms.
-
-  To view the project, click [here](https://react-vite-project-ayk7j.ondigitalocean.app/)
 
