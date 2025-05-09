@@ -2,7 +2,8 @@
 
 This is a simple React project that uses Vite for bundling and Tailwind CSS for styling, all set up within a Dockerized environment. The purpose of this project is to learn how Docker can be used for both local development and production environments.
 
-I've also written a blog post about it - [click here to read it] (https://dev.to/pembans/building-react-project-with-vite-tailwindcss-docker-and-deploying-to-digitalocean-3glp)
+I've also written a blog post about it - [click here to read it](https://dev.to/pembans/building-react-project-with-vite-tailwindcss-docker-and-deploying-to-digitalocean-3glp)
+
 
 ### Key Features:
 - **Dockerized Setup**: The project includes a Dockerfile that supports both the development and production environments using multi-stage build.
