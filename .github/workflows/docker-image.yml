@@ -1,10 +1,8 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  tags:
+   - 'v*.*.*'
 
 jobs:
 
@@ -23,9 +21,9 @@ jobs:
     
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --target prod --tag react-vite-project:v1.0.0
-        docker tag react-vite-project:v1.0.0 registry.digitalocean.com/private-docker-images/react-vite-project:v1.0.0
+        docker build . --file Dockerfile --target prod --tag react-vite-project:{{github.ref_name}}
+        docker tag react-vite-project:{{github.ref_name}} registry.digitalocean.com/private-docker-images/react-vite-project:{{github.ref_name}}
 
     - name: Push Docker Image to Digital Ocean Registry
       run: |
-        docker push registry.digitalocean.com/private-docker-images/react-vite-project:v1.0.0
+        docker push registry.digitalocean.com/private-docker-images/react-vite-project:{{github.ref_name}}
